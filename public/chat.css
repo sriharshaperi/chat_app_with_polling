@@ -1,0 +1,219 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  scroll-behavior: smooth;
+
+  font-family: sans-serif;
+  /* background:#dedede; */
+  background: linear-gradient(135deg, #12c2e9, #c471ed, #f64f59);
+  background-size: cover;
+  font-size: 12px;
+  line-height: 1.3;
+  overflow: hidden;
+}
+
+#login-app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.error-message-username {
+  color: rgb(183, 15, 15);
+  font-size: large;
+}
+
+#login-app > * {
+  margin: 10px;
+}
+
+.btn-login,
+.btn-logout,
+.btn-refresh {
+  width: 150px;
+  height: 50px;
+  font-size: large;
+  border-radius: 10px;
+  background: linear-gradient(180deg, #efb2a0, #ba597e);
+}
+
+.btn-login:hover,
+.btn-logout:hover,
+.btn-refresh:hover {
+  background: linear-gradient(180deg, #ba597e, #efb2a0);
+}
+
+#chat-app {
+  /* display: grid;
+  grid-template-areas:
+    "users messages"
+    "outgoing outgoing";
+  grid-template-columns: auto 1fr;
+  grid-template-rows: 1fr auto; */
+  display: flex;
+  flex-direction: column;
+
+  height: 100%;
+}
+
+.buttons-section {
+  display: flex;
+  justify-content: center;
+  padding: 2%;
+  z-index: 1;
+}
+
+.btn-logout {
+  margin-right: 20px;
+}
+
+.input-username {
+  width: 25%;
+  height: 60px;
+  font-size: x-large;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.users {
+  grid-area: users;
+
+  padding: 0;
+  margin: 0;
+
+  overflow-y: auto;
+
+  list-style-type: none;
+  display: none;
+}
+
+.messages {
+  grid-area: messages;
+
+  padding: 0;
+  margin: 0;
+
+  overflow-y: auto;
+
+  list-style-type: none;
+}
+
+.avatar {
+  /* float: left; */
+  height: 50px;
+  border-radius: 50px;
+  margin-left: 10%;
+}
+
+.username {
+  margin: auto 1rem;
+  font-weight: bold;
+  font-size: larger;
+  margin-left: 15%;
+}
+
+.message {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #dedede;
+  background: linear-gradient(135deg, #f6f7f8, #e9e6eb, #dcd3d3);
+  border-radius: 30px;
+  padding: 10px;
+  margin: auto;
+  width: 60%;
+  margin-top: 2%;
+}
+
+.sender-info {
+  display: flex;
+
+  width: 10rem;
+}
+
+.message-text {
+  width: 100%;
+  margin: 0;
+  margin-top: auto;
+  padding-left: 8%;
+  font-size: large;
+}
+
+.outgoing {
+  grid-area: outgoing;
+  text-align: center;
+  margin: 2rem;
+}
+.outgoing button:active {
+  color: #555;
+  border-radius: 5px;
+}
+.submit-form-button {
+  transition-duration: 0.5s;
+  border-radius: 30px;
+  height: 50px;
+  background: linear-gradient(135deg, #5433ff, #20bdff, #6fb1fc);
+}
+
+.submit-form-button:hover {
+  background: linear-gradient(135deg, #00416a, #799f0c, #ffe000);
+  color: white;
+}
+
+.message-submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.input-send {
+  width: 40%;
+  height: 50px;
+  font-size: large;
+  margin-right: 1%;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+}
+.input-send:focus {
+  border: 3px solid #555;
+}
+
+.error-message-text {
+  margin-right: 5%;
+  font-size: medium;
+  color: rgb(183, 15, 15);
+}
+
+.app-icon {
+  display: block;
+  margin: auto;
+  width: 100px;
+  height: 100px;
+  margin-top: 10%;
+  margin-bottom: 2%;
+}
+
+.user-status-icon {
+  width: 10px;
+  height: 10px;
+}
+
+.status {
+  padding-top: 15%;
+  padding-right: 5%;
+}
+
+.user-status {
+  padding-top: 17px;
+}
